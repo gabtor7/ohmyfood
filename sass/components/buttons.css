@@ -1,0 +1,18 @@
+.btn {
+  border-radius: 50px;
+  background: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-box-shadow: 6px 8px 8px -8px;
+          box-shadow: 6px 8px 8px -8px;
+  color: white;
+  font-size: 16px;
+  /* font-weight: bold; */
+  padding: 20px 30px;
+  border: none;
+}
+
+.exp-btn {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=buttons.css.map */

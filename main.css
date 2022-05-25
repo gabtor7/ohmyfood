@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-family: 'Shrikhand', cursive;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  font-size: 20px;
+}
+
+footer {
+  background-color: #353535;
+  width: 100%;
+  margin: -8px;
+  padding: 1.5em;
+}
+
+footer li {
+  margin-bottom: 5px;
+}
+
+footer li a {
+  color: #fff !important;
+  font-weight: 500;
+}
+
+footer li a i {
+  width: 14px;
+  fill: #fff;
+  margin-right: 10px;
+}
+
+footer img {
+  width: 30%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+body {
+  overflow: hidden;
+}
+
+.header {
+  text-align: center;
+  margin: -8px;
+}
+
+.header-content {
+  z-index: 1;
+}
+
+.main-title-container {
+  background-color: #f3f3f3;
+  padding-bottom: 50px;
+}
+
+.site-logo {
+  position: relative;
+  -webkit-box-shadow: 0px 5px 5px -5px darkgray;
+          box-shadow: 0px 5px 5px -5px darkgray;
+  z-index: 99;
+}
+
+.site-logo img {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.city-loc {
+  background-color: #d8d8d8;
+  z-index: 50;
+}
+
+.city-loc i, .city-loc p {
+  display: inline-block;
+}
+
+.city-loc i {
+  height: 22px;
+}
+
+.city-loc p {
+  font-weight: bold;
+  margin-left: 12px;
+}
+
+.motto-intro {
+  padding: 24px;
+}
+
+.motto-intro h2 {
+  font-weight: black;
+  margin: auto 1.5em;
+}
+
+.btn {
+  border-radius: 50px;
+  background: #ff79da;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  -webkit-box-shadow: 6px 8px 8px -8px;
+          box-shadow: 6px 8px 8px -8px;
+  color: white;
+  font-size: 16px;
+  /* font-weight: bold; */
+  padding: 20px 30px;
+  border: none;
+}
+
+.exp-btn {
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=main.css.map */

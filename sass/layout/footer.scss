@@ -1,0 +1,33 @@
+footer {
+    background-color: #353535;
+    width: 100%;
+    margin: -8px;
+    padding: 1.5em;
+
+    li {
+
+        margin-bottom: 5px;
+    
+        a {
+            color: #fff!important;
+            font-weight: 500;
+
+            i{
+                width: 14px;
+                fill: #fff;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    img{
+        width: 30%;
+        filter: invert(1);
+    }
+
+}
+
+body {
+    overflow: hidden;
+}
+

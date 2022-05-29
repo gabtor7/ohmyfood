@@ -1,0 +1,20 @@
+.content-tile{
+    display: inline-flex;
+    font-size: 18px;
+    align-items: center;
+}
+
+.tagnb{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    background-color: #9356dc;
+    border-radius: 20px;
+
+    p{
+        margin: auto;
+    }
+}

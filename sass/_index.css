@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 body {
   font-family: "Roboto", sans-serif;
@@ -101,8 +101,9 @@ body {
   margin: auto 1.5em;
 }
 
-.main {
-  margin: 15px;
+main {
+  padding: 15px;
+  margin-bottom: 20px;
 }
 
 .btn {
@@ -121,13 +122,39 @@ body {
   margin-bottom: 10px;
 }
 
+.all-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
 .content-tile {
-  display: inline-flex;
+  margin-left: 20px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
   font-size: 18px;
   align-items: center;
+  background-color: #f3f3f3;
+  padding: 10px 20px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 5px #c1c1c1;
+}
+
+.step-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+.step-content p {
+  font-weight: 500;
 }
 
 .tagnb {
+  margin-left: -35px;
   display: flex;
   justify-content: space-around;
   text-align: center;
@@ -139,6 +166,11 @@ body {
 }
 .tagnb p {
   margin: auto;
+}
+
+.content-card {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=_index.css.map */

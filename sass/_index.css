@@ -31,19 +31,25 @@ p {
   font-weight: 600;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 2px;
+}
+
 footer {
   background-color: #353535;
-  width: 100%;
-  margin: -8px;
   padding: 1.5em;
   margin-top: 40px;
 }
 footer li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 footer li a {
   color: #fff !important;
-  font-weight: 500;
+  font-size: 17px;
 }
 footer li a i {
   width: 14px;
@@ -55,13 +61,8 @@ footer img {
   filter: invert(1);
 }
 
-body {
-  overflow: hidden;
-}
-
 .header {
   text-align: center;
-  margin: -8px;
 }
 
 .header-content {
@@ -84,7 +85,7 @@ body {
 }
 
 .city-loc {
-  background-color: #d8d8d8;
+  background-color: #dedede;
   z-index: 50;
 }
 .city-loc i, .city-loc p {
@@ -95,30 +96,28 @@ body {
 }
 .city-loc p {
   font-weight: bold;
-  margin-left: 12px;
+  margin: 20px auto 20px 12px;
 }
 
 .motto-intro {
   padding: 24px;
+  padding-top: 40px;
 }
 .motto-intro h2 {
   font-weight: black;
-  margin: auto 1.5em;
+  margin: auto 1.5em 1em;
 }
 
 main {
-  padding: 15px;
   margin-bottom: 20px;
+}
+main .ordering-steps {
+  padding: 15px;
 }
 main .cards-section {
   background-color: #f2f2f2;
-  margin: auto -15px;
-}
-
-section {
-  margin: 40px -15px;
-  padding: 40px 15px;
-  height: fit-content;
+  padding: 15px;
+  padding-top: 30px;
 }
 
 .btn {
@@ -127,8 +126,8 @@ section {
   background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
   box-shadow: 6px 8px 8px -8px;
   color: white;
-  font-size: 16px;
-  /* font-weight: bold; */
+  font-size: 18px;
+  font-weight: 500;
   padding: 20px 30px;
   border: none;
 }
@@ -142,6 +141,7 @@ section {
   flex-direction: column;
   gap: 20px;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .content-tile {
@@ -153,9 +153,19 @@ section {
   font-size: 18px;
   align-items: center;
   background-color: #f3f3f3;
-  padding: 10px 20px;
+  padding: 25px 20px;
   border-radius: 25px;
-  box-shadow: 0px 5px 5px #c1c1c1;
+  box-shadow: 0px 5px 5px #ccc;
+}
+.content-tile:hover, .content-tile:active {
+  background-color: rgba(147, 86, 220, 0.137254902);
+}
+.content-tile:hover .step-icon, .content-tile:active .step-icon {
+  color: #9356dc;
+}
+
+.step-icon {
+  color: #808080;
 }
 
 .step-content {
@@ -165,6 +175,7 @@ section {
   align-items: center;
 }
 .step-content p {
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -181,37 +192,52 @@ section {
 }
 .tagnb p {
   margin: auto;
+  font-size: 16px;
 }
 
 .cards-list {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
 .r-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  justify-content: center;
   border-radius: 25px;
   background-color: #fff;
+  box-shadow: 0px 2px 2px #ccc;
 }
 .r-card img {
   object-fit: cover;
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 2/1;
 }
 .r-card .card-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 12px;
+  padding: 10px 30px 10px 15px;
 }
-.r-card .card-content .name-loc {
-  gap: 5px;
+.r-card .card-content .name-loc p {
+  margin: 10px 0;
 }
 .r-card .card-content .c-like {
   font-size: 30px;
+}
+.r-card .new-menu {
+  position: absolute;
+  top: 15px;
+  right: 19px;
+  background-color: #99e2d0;
+  padding: 7px 11px;
+  z-index: 999;
+}
+.r-card .new-menu p {
+  font-weight: 500;
+  color: #007755;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */

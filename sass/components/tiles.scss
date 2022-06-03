@@ -3,6 +3,7 @@
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .content-tile{
@@ -14,10 +15,22 @@
     font-size: 18px;
     align-items: center;
     background-color: #f3f3f3;
-    padding: 10px 20px;
+    padding: 25px 20px;
 
     border-radius: 25px;
-    box-shadow: 0px 5px 5px #c1c1c1;
+    box-shadow: 0px 5px 5px #ccc;
+
+    &:hover, &:active{
+        background-color: #9356dc23;
+
+        .step-icon{
+            color: #9356dc;
+        }
+    }
+}
+
+.step-icon{
+    color: #808080;
 }
 
 .step-content{
@@ -27,8 +40,11 @@
     align-items: center;
 
     p{
+        font-size: 20px;
         font-weight: 500;
     }
+
+    
 }
 
 .tagnb{
@@ -44,5 +60,6 @@
 
     p{
         margin: auto;
+        font-size: 16px;
     }
 }

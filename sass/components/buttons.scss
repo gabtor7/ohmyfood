@@ -1,16 +1,22 @@
 .btn {
+    min-width: 200px;
     border-radius: 50px;
     background: rgb(255,121,218);
     background: linear-gradient(180deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
     box-shadow: 6px 8px 8px -8px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
+    letter-spacing: 0.5;
     font-weight: 500;
-    padding: 20px 30px;
+    padding: 16px 26px;
     border: none;
 }
 
 .exp-btn {
     margin-bottom: 10px;
     
+}
+
+.order-btn {
+    margin: 45px auto;
 }

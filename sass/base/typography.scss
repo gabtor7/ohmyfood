@@ -1,24 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
 body {
     font-family:'Roboto', sans-serif;
 }
 
-h1{
+h1 {
     font-family: 'Shrikhand', cursive;
     font-weight: 400;
 }
 
-h2 {
-    font-weight: bold;
-    font-size: 26px;
+.rest-name {
+    h1 {
+        font-size: 30px;
+    }
 }
 
-h3{
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+h3 {
     text-transform: uppercase;
     font-size: 20px;
     font-weight: 400;
+}
+
+.list-title {
+    h3 {
+        font-size: 17px;
+        color: #424242;
+    }
+}
+
+h4 {
+    font-size: 19px;
+    font-weight: 900;
+    margin: 4px 2px;
 }
 
 ul {
@@ -32,9 +51,34 @@ a {
 }
 
 p {
-    font-size: 20px;
+    font-size: 18px;
 }
 
-.r-name{
-    font-weight: 600;
+.d-tile{
+
+    h4 {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-weight: 600;
+        font-size: 17px;
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 300;
+        white-space: nowrap
+    }
+
+    p:first-child {
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .d-price {
+        font-weight: 600;
+        color: #424242;
+        margin-left: 6px;
+    }
 }
+

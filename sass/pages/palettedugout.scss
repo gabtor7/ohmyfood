@@ -10,3 +10,26 @@
         max-width: 100%;
     }
 }
+
+.list-title{
+    position: relative;
+    text-align: left;
+    
+    &:after {
+        background-color: #99E2D0;
+        bottom: -8px;
+        content: '';
+        display: block;
+        height: 3px;
+        left: 0;
+        position: absolute;
+        width: 40px;
+    }
+
+}
+
+.dish-list {
+    li {
+        margin-bottom: 15px;
+    }
+}

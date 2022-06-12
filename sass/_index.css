@@ -211,6 +211,13 @@ main .page-title .c-like {
   font-weight: 500;
   padding: 16px 26px;
   border: none;
+  transition: 0.15s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  box-shadow: 0 0 5px 5px #fff;
 }
 
 .exp-btn {
@@ -303,6 +310,18 @@ main .page-title .c-like {
   justify-content: flex-end;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .all-steps {
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .content-tile {
+    min-width: 310px;
+    flex: 1 1 0px;
+  }
+}
 .cards-list {
   display: flex;
   flex-direction: column;
@@ -339,11 +358,13 @@ main .page-title .c-like {
 }
 .r-card .card-content .r-name i {
   font-size: 26px;
+  transition: 0.2s ease-in-out, background-color 0.3s;
 }
 .r-card .card-content .r-name i:hover, .r-card .card-content .r-name i:visited, .r-card .card-content .r-name i:enabled {
   background: -webkit-linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  /*-webkit-background-clip: text;*/
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transform: scale(1.1);
 }
 .r-card .new-menu {
   position: absolute;

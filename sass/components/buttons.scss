@@ -10,6 +10,13 @@
     font-weight: 500;
     padding: 16px 26px;
     border: none;
+    transition: 0.15s ease-in-out;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 5px 5px #fff;
 }
 
 .exp-btn {

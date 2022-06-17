@@ -66,27 +66,68 @@
 }
 
 .d-tile {
+    justify-content: space-between;
     align-items: flex-start;
     gap: 0px;
     background-color: #fff;
     margin: auto 0px;
     border-radius: 15px;
-    padding: 10px 8px;
     box-shadow: 0 0 5px #ccc;
+    padding: 0px;
+    overflow: hidden;
 
-    &:hover, &:active {
-        background-color: #fff;
-    }
-
-    .dnp {
-        width: 100%;
-        justify-content: space-between;
+    .d-name {
+        text-align: left;
+        padding: 10px 8px;
+        min-width: 100px;
+        flex: 1;
+        //flex grow empeche le "check" de prendre sa largeur
+        
+        p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        
     }
 
     .d-price {
-        margin: auto 14px;
-        height: 100%;
+        padding: 36px 8px 8px;
         justify-content: flex-end;
+        margin: 2px 7px;
+
+        p{
+            font-weight: 600;
+        }
+
+    }
+
+    .d-choice {
+        width: 0px;
+        height: 68px;
+        align-items: center;
+        justify-content: center;
+        background-color: #99e2d0;
+        font-size: 20px;
+        transition: 0.3s ease-in-out;
+
+        i {
+            color: #fff;
+            transition: 0.3s ease-in-out;
+        }
+
+    }
+
+    &:hover, &:active {
+        background-color: #fff;
+
+        .d-choice {
+            width: 68px;
+
+            i {
+                transform: rotate(-360deg);
+            }
+        }
     }
 }
 

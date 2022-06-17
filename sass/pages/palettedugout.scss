@@ -1,3 +1,7 @@
+header, footer, main {
+    visibility: visible!important;
+}
+
 .header-image{
     content: "";
     height: 0;
@@ -29,7 +33,19 @@
 }
 
 .dish-list {
-    li {
-        margin-bottom: 15px;
+    gap: 15px;
+    animation: loadTiles 1.5s ease-out forwards;
+}
+
+@keyframes loadTiles {
+    0%{
+        transform: translateY(60px);
+        gap: 40px;
+        opacity: 0.01;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

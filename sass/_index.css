@@ -156,34 +156,10 @@ footer img {
   font-weight: 200;
 }
 
-.on-load {
-  justify-content: center;
-  animation: hideElement 0s ease-in 3s forwards;
-}
-
-.loader {
-  margin: 20px;
-  border: 3px solid #f3f3f3;
-  border-top: 3px solid #99e2d0;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 2s linear 2;
-  animation-duration: 3s;
-}
-
 .index-header, .index-main, .index-footer {
   animation: pageDisplay 3s forwards;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes pageDisplay {
   0% {
     opacity: 0;
@@ -195,18 +171,10 @@ footer img {
     opacity: 1;
   }
 }
-@keyframes hideElement {
-  0% {
-    height: fit-content;
-  }
-  99% {
-    height: fit-content;
-  }
-  100% {
-    overflow: hidden;
-    height: 0;
-  }
+header, footer, main {
+  visibility: visible !important;
 }
+
 main .ordering-steps {
   padding: 15px;
 }
@@ -214,6 +182,7 @@ main .cards-section {
   background-color: #f2f2f2;
   padding: 15px;
   padding-top: 30px;
+  padding-bottom: 50px;
 }
 main .page-content {
   border-radius: 30px 30px 0 0;
@@ -284,12 +253,13 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
 .all-steps {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 25px;
   text-align: center;
   margin-bottom: 50px;
 }
 
 .content-tile {
+  max-width: 460px;
   margin-left: 20px;
   margin-right: 15px;
   display: flex;
@@ -300,7 +270,7 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   background-color: #f3f3f3;
   padding: 25px 20px;
   border-radius: 25px;
-  box-shadow: 0px 5px 5px #ccc;
+  box-shadow: 0px 5px 10px #ddd;
 }
 .content-tile:hover, .content-tile:active {
   background-color: rgba(147, 86, 220, 0.137254902);
@@ -348,9 +318,12 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   background-color: #fff;
   margin: auto 0px;
   border-radius: 15px;
-  box-shadow: 0 0 5px #ccc;
+  box-shadow: 0 2px 6px #ccc;
   padding: 0px;
   overflow: hidden;
+}
+.d-tile:hover {
+  cursor: pointer;
 }
 .d-tile .d-name {
   text-align: left;
@@ -377,7 +350,7 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   align-items: center;
   justify-content: center;
   background-color: #99e2d0;
-  font-size: 20px;
+  font-size: 24px;
   transition: 0.3s ease-in-out;
 }
 .d-tile .d-choice i {
@@ -394,16 +367,15 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   transform: rotate(-360deg);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .all-steps {
+@media screen and (min-width: 768px) {
+  .all-steps, .dish-list {
     flex-direction: row;
     gap: 20px;
     flex-wrap: wrap;
   }
 
   .content-tile {
-    min-width: 310px;
-    flex: 1 1 0px;
+    width: 460px;
   }
 }
 .cards-list {
@@ -426,6 +398,9 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   width: 100%;
   aspect-ratio: 2/1;
 }
+.r-card:hover {
+  box-shadow: 0 0 0;
+}
 .r-card .card-content {
   display: flex;
   flex-direction: column;
@@ -433,23 +408,27 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   /*align-items: center;*/
   padding: 10px 30px 10px 15px;
 }
+.r-card .card-content .name-loc {
+  justify-content: space-between;
+  align-items: center;
+}
 .r-card .card-content .name-loc p {
   font-size: 19px;
 }
-.r-card .card-content .r-name {
-  display: flex;
-  justify-content: space-between;
-}
-.r-card .card-content .r-name i {
-  font-size: 26px;
+.r-card .card-content .name-loc i {
+  font-size: 26px !important;
   transition: 0.2s ease-in-out, background-color 0.3s;
 }
-.r-card .card-content .r-name i:hover, .r-card .card-content .r-name i:visited, .r-card .card-content .r-name i:enabled {
+.r-card .card-content .name-loc i:hover, .r-card .card-content .name-loc i:visited {
+  cursor: pointer;
   background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  transform: scale(1.1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transform: scale(1.1);
   font-weight: 800;
+}
+.r-card .card-content .r-name {
+  justify-content: space-between;
 }
 .r-card .new-menu {
   position: absolute;
@@ -466,14 +445,53 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   color: #007755;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) {
   .cards-list {
     flex-direction: row;
   }
 
   .r-card {
-    /*a completer*/
-    content: "";
+    flex: 3;
+  }
+}
+.on-load {
+  height: 100vh;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  animation: hideElement 0s ease-in 3s forwards;
+}
+
+.loader {
+  margin: 20px;
+  border: 4px solid #f3f3f3;
+  border-top: 5px solid #99e2d0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear 2;
+  animation-duration: 3s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes hideElement {
+  0% {
+    height: fit-content;
+  }
+  99% {
+    height: fit-content;
+  }
+  100% {
+    overflow: hidden;
+    height: 0;
   }
 }
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -827,11 +845,7 @@ ul {
 }
 
 /*# sourceMappingURL=normalize.css.map */
-header, footer, main {
-  visibility: visible !important;
-}
-
-.header-image {
+.img-lpdg {
   content: "";
   height: 0;
   width: 100%;
@@ -840,13 +854,15 @@ header, footer, main {
   background-size: contain;
   z-index: 1;
 }
-.header-image img {
+.img-lpdg img {
   max-width: 100%;
 }
 
 .list-title {
   position: relative;
   text-align: left;
+  margin-top: 40px;
+  animation: m-loadTiles 1.5s ease-out forwards;
 }
 .list-title:after {
   background-color: #99E2D0;
@@ -861,10 +877,21 @@ header, footer, main {
 
 .dish-list {
   gap: 15px;
-  animation: loadTiles 1.5s ease-out forwards;
+  animation: m-loadTiles 1.5s ease-out forwards;
 }
 
-@keyframes loadTiles {
+@media screen and (min-width: 768px) {
+  .header-image {
+    padding-top: 35%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .dish-list {
+    animation: d-loadTiles 1.5s ease-out forwards;
+  }
+}
+@keyframes m-loadTiles {
   0% {
     transform: translateY(60px);
     gap: 40px;
@@ -874,6 +901,55 @@ header, footer, main {
     transform: translateY(0px);
     opacity: 1;
   }
+}
+@keyframes d-loadTiles {
+  0% {
+    transform: translateX(60px);
+    gap: 40px;
+    opacity: 0.01;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.img-alf {
+  content: "";
+  height: 0;
+  width: 100%;
+  padding-top: 67%;
+  background: url("../assets/images/restaurants/alafrancaise.jpg") no-repeat;
+  background-size: contain;
+  z-index: 1;
+}
+.img-alf img {
+  max-width: 100%;
+}
+
+.img-lne {
+  content: "";
+  height: 0;
+  width: 100%;
+  padding-top: 67%;
+  background: url("../assets/images/restaurants/lanoteenchantee.jpg") no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.img-lne img {
+  max-width: 100%;
+}
+
+.img-ldds {
+  content: "";
+  height: 0;
+  width: 100%;
+  padding-top: 67%;
+  background: url("../assets/images/restaurants/ledelicedessens.jpg") no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+.img-ldds img {
+  max-width: 100%;
 }
 
 /*# sourceMappingURL=_index.css.map */

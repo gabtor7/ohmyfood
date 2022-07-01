@@ -197,6 +197,8 @@ main .page-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
+  margin: 20px auto 0;
 }
 main .page-title .c-like {
   font-size: 24px;
@@ -205,7 +207,9 @@ main .page-title .c-like i {
   transition: 0.2s ease-in-out, background-color 0.3s;
 }
 main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page-title .c-like i:enabled {
+  cursor: pointer;
   background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: scale(1.2);
@@ -226,7 +230,7 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   border-radius: 50px;
   background: rgb(255, 121, 218);
   background: linear-gradient(180deg, rgb(255, 121, 218) 0%, rgb(147, 86, 220) 100%);
-  box-shadow: 6px 8px 8px -8px;
+  box-shadow: 0 5px 5px #bbb;
   color: white;
   font-size: 16px;
   letter-spacing: 0.5;
@@ -235,7 +239,6 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   border: none;
   transition: 0.15s ease-in-out;
 }
-
 .btn:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -259,7 +262,6 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
 }
 
 .content-tile {
-  max-width: 460px;
   margin-left: 20px;
   margin-right: 15px;
   display: flex;
@@ -272,15 +274,16 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   border-radius: 25px;
   box-shadow: 0px 5px 10px #ddd;
 }
+.content-tile .step-icon {
+  font-size: 22px;
+  color: #808080;
+}
 .content-tile:hover, .content-tile:active {
+  cursor: pointer;
   background-color: rgba(147, 86, 220, 0.137254902);
 }
 .content-tile:hover .step-icon, .content-tile:active .step-icon {
   color: #9356dc;
-}
-
-.step-icon {
-  color: #808080;
 }
 
 .step-content {
@@ -331,7 +334,11 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   min-width: 100px;
   flex: 1;
 }
+.d-tile .d-name h4 {
+  font-size: 19px;
+}
 .d-tile .d-name p {
+  font-size: 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -346,7 +353,7 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
 }
 .d-tile .d-choice {
   width: 0px;
-  height: 68px;
+  height: 72px;
   align-items: center;
   justify-content: center;
   background-color: #99e2d0;
@@ -361,21 +368,28 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   background-color: #fff;
 }
 .d-tile:hover .d-choice, .d-tile:active .d-choice {
-  width: 68px;
+  width: 72px;
 }
 .d-tile:hover .d-choice i, .d-tile:active .d-choice i {
   transform: rotate(-360deg);
 }
 
-@media screen and (min-width: 768px) {
-  .all-steps, .dish-list {
-    flex-direction: row;
-    gap: 20px;
-    flex-wrap: wrap;
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .dish-list {
+    justify-content: flex-start;
   }
 
   .content-tile {
-    width: 460px;
+    min-width: 400px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dish-list {
+    flex-direction: row;
+  }
+
+  .content-tile {
+    flex: 1;
   }
 }
 .cards-list {
@@ -423,6 +437,7 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   cursor: pointer;
   background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
   transform: scale(1.1);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;
@@ -445,13 +460,26 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   color: #007755;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 991px) {
   .cards-list {
     flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .r-card {
-    flex: 3;
+    flex: 6;
+    flex-basis: 40%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .cards-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .r-card {
+    flex: 1;
   }
 }
 .on-load {
@@ -861,7 +889,7 @@ ul {
 .list-title {
   position: relative;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 25px;
   animation: m-loadTiles 1.5s ease-out forwards;
 }
 .list-title:after {
@@ -880,8 +908,8 @@ ul {
   animation: m-loadTiles 1.5s ease-out forwards;
 }
 
-@media screen and (min-width: 768px) {
-  .header-image {
+@media screen and (min-width: 992px) {
+  main .header-image {
     padding-top: 35%;
     background-size: cover;
     background-position: center;

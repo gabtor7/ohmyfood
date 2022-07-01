@@ -1,7 +1,7 @@
 .list-title{
     position: relative;
     text-align: left;
-    margin-top: 40px;
+    margin-top: 25px;
     animation: m-loadTiles 1.5s ease-out forwards;
     
     &:after {
@@ -22,9 +22,9 @@
     animation: m-loadTiles 1.5s ease-out forwards;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     
-    .header-image {
+    main .header-image {
         padding-top: 35%;
         background-size: cover;
         background-position: center;

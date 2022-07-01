@@ -49,6 +49,7 @@
                     cursor: pointer;
                     background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
                     transform: scale(1.1);  
+                    background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-weight: 800;  
@@ -83,12 +84,27 @@
     }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width: 991px) {
     .cards-list {
         flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
     }
 
     .r-card {
-        flex: 3;
+        flex: 6;
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .cards-list {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .r-card {
+        flex: 1;
     }
 }

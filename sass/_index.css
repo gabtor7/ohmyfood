@@ -84,7 +84,7 @@ footer {
   padding: 1.5em;
 }
 footer li {
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 footer li a {
   color: #fff !important;
@@ -308,10 +308,8 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   background-color: #9356dc;
   border-radius: 20px;
   padding-top: 3px;
-}
-.tagnb p {
-  margin: auto;
   font-size: 14px;
+  padding: 5px;
 }
 
 .d-tile {
@@ -324,9 +322,6 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   box-shadow: 0 2px 6px #ccc;
   padding: 0px;
   overflow: hidden;
-}
-.d-tile:hover {
-  cursor: pointer;
 }
 .d-tile .d-name {
   text-align: left;
@@ -365,6 +360,7 @@ main .page-title .c-like i:hover, main .page-title .c-like i:visited, main .page
   transition: 0.3s ease-in-out;
 }
 .d-tile:hover, .d-tile:active {
+  cursor: pointer;
   background-color: #fff;
 }
 .d-tile:hover .d-choice, .d-tile:active .d-choice {

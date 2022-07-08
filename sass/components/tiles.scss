@@ -63,11 +63,8 @@
     background-color: #9356dc;
     border-radius: 20px;
     padding-top: 3px;
-
-    p{
-        margin: auto;
-        font-size: 14px;
-    }
+    font-size: 14px;
+    padding: 5px;
 }
 
 .d-tile {
@@ -81,16 +78,11 @@
     padding: 0px;
     overflow: hidden;
 
-    &:hover {
-        cursor: pointer;
-    }
-
     .d-name {
         text-align: left;
         padding: 10px 8px;
         min-width: 100px;
         flex: 1;
-        //flex grow empeche le "check" de prendre sa largeur
 
         h4 {
             font-size: 19px;
@@ -134,6 +126,7 @@
     }
 
     &:hover, &:active {
+        cursor: pointer;
         background-color: #fff;
 
         .d-choice {

@@ -15,7 +15,8 @@
     &:hover {
         cursor: pointer;
         transform: scale(1.05);
-        box-shadow: 0 0 5px 5px #fff;
+        box-shadow: 0 10px 10px #999;
+        background: linear-gradient(180deg, rgba(255,140,230,1) 0%, rgba(167,106,240,1) 100%);
     }
 }
 
